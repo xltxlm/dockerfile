@@ -13,7 +13,7 @@ ENV V2RAY_PLUGIN_DOWNLOAD_URL https://github.com/shadowsocks/v2ray-plugin/releas
 ENV KCP_DOWNLOAD_URL https://github.com/xtaci/kcptun/releases/download/v${KCP_VERSION}/kcptun-linux-amd64-${KCP_VERSION}.tar.gz
 
 RUN apk upgrade \
-    && apk add bash tzdata rng-tools \
+    && apk add bash tzdata rng-tools telnet curl wget \
     && apk add --virtual .build-deps \
         autoconf \
         automake \
